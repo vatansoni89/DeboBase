@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from './Interfaces/IProduct';
 
 @Component({
   selector: 'pm-root',
