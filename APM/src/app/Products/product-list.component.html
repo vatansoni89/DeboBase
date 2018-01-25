@@ -33,7 +33,7 @@
                 <tbody>
                     <tr *ngFor='let p of products'>
                         <td>
-                            <img *ngIf=i sImageDisplayed [src]="p.url" alt="Alternate text" style.width.px={ {imageWidth}} style.height.px={ {imageWidth}}>
+                            <img *ngIf=isImageDisplayed [src]="p.url" alt="Alternate text" [style.width.px]=imageWidth [style.height.px]=imageWidth>
                         </td>
                         <td>
                             {{p.Product}}
