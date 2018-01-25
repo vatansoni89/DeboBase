@@ -5,4 +5,5 @@ export interface IProduct{
     Available: boolean;	
     Price: number;	
     Rating:number;
+    url:string;
 }
