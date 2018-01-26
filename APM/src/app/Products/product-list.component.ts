@@ -16,9 +16,10 @@ export class ProductListComponent {
 
   constructor()
   {
-    debugger;
-    this.textInputForFilter='XXX';
+    
     this.FilterList = this.products;
+    this.textInputForFilter='XXX';
+
   }
 
   
