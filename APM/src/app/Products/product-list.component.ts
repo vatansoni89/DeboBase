@@ -6,11 +6,38 @@ import { IProduct } from '../Interfaces/IProduct';
   templateUrl: './product-list.component.html'
 })
 export class ProductListComponent {
-  filterInput:string = 'A';
+  
+  _textInput:string = '';
   isImageDisplayed: boolean = false;
   pageTitle: string = 'My Product-List';
   imageWidth: number = 50;
   imageHeight: number = 50;
+  FilterList: IProduct[];
+
+  constructor()
+  {
+    this.textInputForFilter='XXX';
+    this.FilterList = this.products;
+  }
+
+  
+  public get textInputForFilter(): string {
+    return this._textInput;
+    
+  }
+
+  
+  public set textInputForFilter(val1: string) {
+   
+   
+    this.FilterList = this.textInputForFilter ? this.getFilteredProduct(this.textInputForFilter) :  this.products;
+    
+  }
+  
+  getFilteredProduct(input : string):IProduct[]{
+    return this.products.filter(x=>x.Product.toLocaleLowerCase().indexOf(input.toLocaleLowerCase())!=-1)
+  };
+
   products: IProduct[] = [{
     Product: 'A',
     Available: true,
