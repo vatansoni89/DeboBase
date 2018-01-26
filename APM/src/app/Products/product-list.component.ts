@@ -16,6 +16,7 @@ export class ProductListComponent {
 
   constructor()
   {
+    debugger;
     this.textInputForFilter='XXX';
     this.FilterList = this.products;
   }
@@ -29,7 +30,7 @@ export class ProductListComponent {
   
   public set textInputForFilter(val1: string) {
    
-   
+    this._textInput= val1;
     this.FilterList = this.textInputForFilter ? this.getFilteredProduct(this.textInputForFilter) :  this.products;
     
   }
