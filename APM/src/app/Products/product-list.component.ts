@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { IProduct } from '../Interfaces/IProduct';
 
+
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html'
@@ -18,7 +19,7 @@ export class ProductListComponent {
   {
     
     this.FilterList = this.products;
-    this.textInputForFilter='XXX';
+    this.textInputForFilter='';
 
   }
 
@@ -45,7 +46,7 @@ export class ProductListComponent {
     Available: true,
     Code: 125,
     Price: 100,
-    Rating: 4,
+    Rating: 1,
     url: 'http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
   },
   {
@@ -53,7 +54,7 @@ export class ProductListComponent {
     Available: true,
     Code: 125,
     Price: 100,
-    Rating: 4,
+    Rating: 2,
     url: 'http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
   },
   {
